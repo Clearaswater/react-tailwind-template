@@ -2,6 +2,7 @@ import "./App.css";
 
 const message = `Welcome to React+Tailwind`;
 const btnText = `Click me for nothing`;
+
 function App() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
@@ -9,6 +10,16 @@ function App() {
       <button className="bg-blue-300 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         {btnText}
       </button>
+      <div className="mt-8">
+        <iframe
+          title="try_finance"
+          width="600"
+          height="373.5"
+          src="https://app.powerbi.com/view?r=eyJrIjoiZGVmNzIwNTktY2ZlYy00ZWQwLTg1NTYtYTJlNTU1NzIxNmExIiwidCI6IjZmNDQzMmRjLTIwZDItNDQxZC1iMWRiLWFjMzM4MGJhNjMzZCIsImMiOjEwfQ%3D%3D"
+          frameBorder="0"
+          allowFullScreen={true}
+        ></iframe>
+      </div>
     </div>
   );
 }
