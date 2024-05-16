@@ -1,22 +1,17 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import WelcomePage from './WelcomePage';
+import DashboardPage from './DashboardPage';
 import './App.css';
 
-const message = 'This is PowerBI Financial Dashboard';
-
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold mb-8">{message}</h1>
-      <div className="w-full h-full mt-8">
-        <iframe
-          title="try_finance"
-          className="w-full h-full"
-          src="https://app.powerbi.com/view?r=eyJrIjoiZGVmNzIwNTktY2ZlYy00ZWQwLTg1NTYtYTJlNTU1NzIxNmExIiwidCI6IjZmNDQzMmRjLTIwZDItNDQxZC1iMWRiLWFjMzM4MGJhNjMzZCIsImMiOjEwfQ%3D%3D"
-          frameBorder="0"
-          allowFullScreen={true}
-        ></iframe>
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/" element={<WelcomePage />} />
+      </Routes>
+    </Router>
   );
 }
 
