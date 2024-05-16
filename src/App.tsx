@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-const message = 'Welcome to React+Tailwind';
+const message = 'This is PowerBI Financial Dashboard';
 const btnText = 'Click me to view the Power BI report';
 
 function App() {
